@@ -1,0 +1,28 @@
+h1 {
+	background-color:brown;
+}
+
+form {
+	background-image: url("../html/viswa-teja-yFH_CnITfEQ-unsplash.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h2{
+	background-color: cornflowerblue;
+	padding: 30px 20px;
+	margin: 30px 20px;
+	border: 10px dotted yellow;
+	outline: 5px dashed brown;
+}
+
+h3 {
+	background-color: aqua;
+	display: inline-block;
+	visibility: visible;
+	min-width: 200px;
+	max-width: 250px;
+	min-height: 100px;
+	max-height: 150px;
+	overflow: auto;
+}
