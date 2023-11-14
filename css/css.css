@@ -25,4 +25,226 @@ h3 {
 	min-height: 100px;
 	max-height: 150px;
 	overflow: auto;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 25px;
+	font-style: italic;
+	font-variant: small-caps;
+}
+
+.text {
+	color: red;
+	text-shadow: 5px 5px 5px black;
+	text-align: center;
+	direction: ltr;
+	vertical-align: bottom;
+	text-decoration: underline;
+	text-transform: capitalize;
+	text-indent: 100px;
+	letter-spacing: 1px;
+	line-height: 50px;
+	word-spacing: 5px;
+
+	width: 300px;
+	white-space: nowrap;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.test {
+	width: 500px;
+	word-break: break-word;
+	cursor: pointer;
+}
+
+p {
+	font-weight: bold;
+}
+
+.float {
+	background-color: brown;
+	width: 500px;
+	height: 500px;
+	margin: 50px;
+}
+
+.float p {
+	color: blueviolet;
+	background-color: black;
+	float: left;
+	opacity: 0.7;
+}
+
+.float .three {
+	clear: both;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.list {
+	list-style-type: georgian;
+	list-style-position: inside;
+}
+
+table {
+	width: 100%;
+	border-spacing: 0px;
+}
+
+table th {
+	padding: 15px;
+	border: 1px solid black;
+	background-color: bisque;
+}
+
+table td {
+	padding: 15px;
+	border: 1px solid black;
+	background-color:azure;
+}
+
+table caption {
+	border-top: 2px dotted brown;
+	border-left: 2px dotted brown;
+	border-right: 2px dotted brown;
+	width: 30%;
+	margin-left: 290px;
+}
+
+header p:hover {
+	color: brown;
+	background-color: blanchedalmond;
+	width: fit-content;
+	margin-left: 10px;
+}
+
+main p:hover::first-letter {
+	color: red;
+	font-size: 30px;
+	background-color: black;
+	margin-left: 20px;
+}
+
+
+article p::selection {
+	background-color: black;
+	color: yellow;
+}
+
+article {
+	position: relative;
+	margin-left: 20px;
+}
+
+article p::before {
+	content: "";
+	border-width: 5px;
+	border-color: transparent transparent transparent blue;
+	border-style: solid;
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	left: -8px;
+	margin-top: 5px;
+}
+
+article p:hover {
+	margin-left: 20px;
+}
+
+nav p {
+	counter-increment: counter;
+}
+
+nav {
+
+	margin-left: 20px;
+}
+
+nav p::after {
+	content: counter(counter);
+	width: fit-content;
+	height: 0px;
+	margin-top: 2px;
+}
+
+section {
+	background-color: aqua !important;
+	border-radius: 20px;
+	padding: 10px;
+	width: 100px;
+	margin-left: 200px;
+	box-shadow: 5px 5px 15px 5px rgb(12, 103, 121);
+	box-sizing: content-box;
+	transition-duration: 2s;
+	transition-property: width;
+	transition-delay: .2s;
+	transition-timing-function: ease-in-out;
+}
+
+:root {
+	--variable-width: 300px;
+}
+
+section:hover {
+	width: var(--variable-width, 500px);
+}
+
+aside {
+	background-color: antiquewhite;
+	display: flex;
+	flex-direction: row;
+	height: 100px;
+	width: 400px;
+	margin-left: 200px;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+footer {
+	background-color: beige;
+	display: flex;
+	width: 400px;
+	margin-left: 200px;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.aside {
+	background-color: yellow;
+	color: green;
+	flex-grow: 0;
+	width: 100px;
+	order: 3;
+	transition-duration: 1s;
+	transition-property: padding;
+	align-self: flex-end;
+}
+
+.hazem {
+	background-color: green;
+	color: yellow;
+	width: 100px;
+	flex-shrink: 3;
+	order: 1;
+	transition-duration: 1s;
+	transition-property: padding;
+	align-self: flex-start;
+}
+
+.zoome {
+	background-color: red;
+	color: black;
+	width: 100px;
+	order: 2;
+	flex-basis: 40%;
+	transition-duration: 1s;
+	transition-property: padding;
+}
+
+.aside:hover, .zoome:hover, .hazem:hover {
+	padding: 10px;
 }
