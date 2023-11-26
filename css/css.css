@@ -203,16 +203,6 @@ aside {
 	align-items: center;
 }
 
-footer {
-	background-color: beige;
-	display: flex;
-	width: 400px;
-	margin-left: 200px;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-content: center;
-}
-
 .aside {
 	background-color: yellow;
 	color: green;
@@ -247,4 +237,155 @@ footer {
 
 .aside:hover, .zoome:hover, .hazem:hover {
 	padding: 10px;
+}
+
+.img {
+	filter: grayscale(100%);
+	transition-duration: 1.5s;
+}
+
+.img:hover {
+	filter: none;
+	margin-left: 20px;
+}
+
+* {
+	caret-color: red;
+}
+
+.event {
+	pointer-events: none;
+}
+
+.grid p {
+	background-color: red;
+	text-align: center;
+}
+
+.grid .one {
+	grid-area: one;
+}
+.grid .two {
+	grid-area: two;
+}
+
+.grid {
+	display: grid;
+	margin-left: 10px;
+	grid-template-columns: 25% 25% 25% 1fr;
+	grid-template-rows: 50% auto;
+	gap: 5px 5px;
+	grid-template-areas: "one one two two" ". . . .";
+}
+
+.grid .three {
+	grid-column: 1 / 4;
+}
+
+.grid .four {
+	grid-row: 1 / 4;
+	background-color: green;
+}
+
+footer {
+	background-color: beige;
+	display: flex;
+	width: 400px;
+	margin-left: 200px;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	transform: scale(1.1, 1.1);
+	transform: skew(5deg, 5deg);
+}
+
+.gradient {
+	background-image: linear-gradient(to right, red, blue, orange, brown);
+	width: 300px;
+	transform: translate(250px, 50px);
+}
+
+.transform {
+	background-color: green;
+	width: 300px;
+	margin: 30%;
+	transform-origin: 100% 50%;
+	transform: rotate(30deg);
+}
+
+body {
+	perspective: 300px;
+	perspective-origin: 50% 50%;
+}
+
+.transform3d {
+	background-color: yellow;
+	width: 300px;
+	margin: 30%;
+	/* transform: rotate3d(0, 0, 1, 30deg); */
+	transform: translate3d(0, 0, 100px);
+	animation-name: animation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	animation-delay: 1s;
+	/* animation-fill-mode: both; */
+	animation-play-state: running;
+}
+
+@keyframes animation {
+	0% {
+		background-color: red;
+	}
+	50% {
+		background-color: green;
+	}
+	100% {
+		background-color: blue;
+	}
+}
+
+body {
+	perspective: 300px;
+	perspective-origin: 50% 50%;
+}
+
+.flip {
+	margin: 30%;
+	width: 200px;
+	font-size: 50px;
+	position: relative;
+	height: 200px;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.face {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backface-visibility: hidden;
+}
+
+.front {
+	background-color: red;
+}
+
+.back {
+	background-color: green;
+	transform: rotatey(180deg);
+}
+
+.flip:hover {
+	transform: rotatey(-180deg);
+}
+
+@media print {
+	body {
+		display: none;
+	}
 }
